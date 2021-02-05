@@ -114,6 +114,7 @@ class ModeSerializer(serializers.Serializer):  # pylint: disable=abstract-method
     slug = serializers.CharField(max_length=100)
     name = serializers.CharField(max_length=255)
     min_price = serializers.IntegerField()
+    price = serializers.DecimalField(max_digits=30, decimal_places=2)
     suggested_prices = StringListField(max_length=255)
     currency = serializers.CharField(max_length=8)
     expiration_datetime = serializers.DateTimeField()
